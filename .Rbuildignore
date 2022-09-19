@@ -1,0 +1,5 @@
+^vvauditor\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^install_local_packages.R
+^build_vvauditor.R

@@ -1,0 +1,43 @@
+Package: vvauditor
+Title: Creates Assertion Tests
+Version: 0.5.4.9000
+Authors@R: c(
+    person("Hadley", "Wickham", email = "hadley@rstudio.com", role = "cre"),
+    person("Winston", "Chang", email = "winston@rstudio.com", role = "aut"),
+    person("RStudio", role = c("cph", "fnd")))
+Description: This package provides numerous assertion tests.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports: 
+    BurStMisc,
+    checkmate,
+    cli,
+    data.table,
+    dplyr,
+    findR,
+    lintr,
+    lubridate,
+    purrr,
+    readr,
+    rex,
+    rlang,
+    rstudioapi,
+    slackr,
+    stats,
+    stringi,
+    stringr,
+    this.path,
+    tibble,
+    tidyr,
+    tidyselect,
+    vroom,
+    vvcommander,
+    vvmover,
+    vvsculptor,
+    xml2
+Remotes:
+    vusaverse/vvcommander,
+    vusaverse/vvmover,
+    vusaverse/vvsculptor
