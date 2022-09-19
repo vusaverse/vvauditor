@@ -8,6 +8,7 @@
 #' c(INS_Studentnummer, INS_Opleidingsnaam_2002, INS_Inschrijvingsjaar)
 #'
 #' @return table with the results.
+#' @importFrom dplyr %>%
 #' @export
 check_columns_for_double_rows <- function(data,
                                           group_vars = c("INS_Studentnummer",

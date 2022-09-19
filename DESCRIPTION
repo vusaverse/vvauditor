@@ -11,32 +11,19 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Imports: 
-    BurStMisc,
-    checkmate,
-    cli,
-    data.table,
     dplyr,
     findR,
-    lintr,
-    lubridate,
     purrr,
     readr,
-    rex,
     rlang,
-    rstudioapi,
-    slackr,
     stats,
-    stringi,
     stringr,
-    this.path,
     tibble,
     tidyr,
     tidyselect,
-    vroom,
     vvcommander,
     vvmover,
     vvsculptor,
-    xml2
 Remotes:
     vusaverse/vvcommander,
     vusaverse/vvmover,
