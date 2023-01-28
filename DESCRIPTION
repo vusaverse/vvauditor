@@ -1,15 +1,16 @@
 Package: vvauditor
 Title: Creates Assertion Tests
-Version: 0.5.4.9000
+Version: 0.5.5
 Authors@R: person("Tomer", "Iwan", , "t.iwan@vu.nl", role = c("aut", "cre", "cph"))
 Description: This package provides numerous assertion tests.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Imports: 
     dplyr,
     findR,
+    magrittr,
     purrr,
     readr,
     rlang,
@@ -18,11 +19,3 @@ Imports:
     tibble,
     tidyr,
     tidyselect
-Suggest:
-    vvcommander,
-    vvmover,
-    vvsculptor
-Remotes:
-    vusaverse/vvcommander,
-    vusaverse/vvmover,
-    vusaverse/vvsculptor
