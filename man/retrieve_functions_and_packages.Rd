@@ -13,5 +13,5 @@ retrieve_functions_and_packages(path)
 Used_functions
 }
 \description{
-retrivess functions and their corresponding packages used in a given script.
+Retrieves functions and their corresponding packages used in a given script.
 }

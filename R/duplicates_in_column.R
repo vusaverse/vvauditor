@@ -6,11 +6,14 @@
 #' @param col Column name.
 #' @return Rows containing duplicated values.
 #' @family tests
+#' @examples
+#' duplicates_in_column(mtcars, "mpg")
+#'
 #' @export
 duplicates_in_column <- function(df, col){
     ## Check if object "df" is a data frame.
     if (!is.data.frame(df)) {
-        return(warning("df is geen data frame"))
+        return(warning("df is not a data frame"))
     }
     ## Check if column exists in df.
     if (!col %in% names(df)) {

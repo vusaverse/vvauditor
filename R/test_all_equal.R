@@ -2,8 +2,13 @@
 #'
 #' Test whether all values in a vector are equal.
 #' @param x Vector to test.
-#' @param na.rm default: FALSE. exlude NAs from the test.
+#' @param na.rm default: FALSE. exclude NAs from the test.
 #' @return Boolean result of the test
+#' @examples
+#' test_all_equal(c(5, 5, 5))
+#'
+#' test_all_equal(c(5, 6, 3))
+#'
 #' @family tests
 #' @export
 test_all_equal <- function(x, na.rm = FALSE) {

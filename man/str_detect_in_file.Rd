@@ -4,18 +4,21 @@
 \alias{str_detect_in_file}
 \title{Detect string in file}
 \usage{
-str_detect_in_file(file, pattern, only_comments, collapse)
+str_detect_in_file(file, pattern, only_comments = FALSE, collapse = FALSE)
 }
 \arguments{
 \item{file}{Path to file.}
 
 \item{pattern}{Pattern to match.}
 
-\item{only_comments}{TRUE: Whether to only search in commented lines.}
+\item{only_comments}{default FALSE. Whether to only search in commented lines.}
 
-\item{collapse}{default: FALSE (standaard): search file line by line.
+\item{collapse}{default: FALSE: search file line by line.
 If true, then pattern is search in the entire file at once after collapsing.
 (only_comments does not work when collapse is set to TRUE)}
+}
+\value{
+Boolean whether pattern exists in file.
 }
 \description{
 Detect string in file

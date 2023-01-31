@@ -1,6 +1,6 @@
 #' Retrieve functions and packages
 #'
-#' retrivess functions and their corresponding packages used in a given script.
+#' Retrieves functions and their corresponding packages used in a given script.
 #'
 #' @param path The complete path of the script.
 #' @return Used_functions

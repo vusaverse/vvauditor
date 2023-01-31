@@ -9,13 +9,19 @@ test_all_equal(x, na.rm = FALSE)
 \arguments{
 \item{x}{Vector to test.}
 
-\item{na.rm}{default: FALSE. exlude NAs from the test.}
+\item{na.rm}{default: FALSE. exclude NAs from the test.}
 }
 \value{
 Boolean result of the test
 }
 \description{
 Test whether all values in a vector are equal.
+}
+\examples{
+test_all_equal(c(5, 5, 5))
+
+test_all_equal(c(5, 6, 3))
+
 }
 \seealso{
 Other tests: 

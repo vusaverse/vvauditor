@@ -4,10 +4,10 @@
 \alias{check_rows}
 \title{Check rows}
 \usage{
-check_rows(data = Analysis_set, name = "analysis set")
+check_rows(df, name = NULL)
 }
 \arguments{
-\item{data}{The data file whose rows are to be counted}
+\item{df}{The data frame whose rows are to be counted}
 
 \item{name}{The name of the data file (this will be printed)}
 }
@@ -17,4 +17,9 @@ A message is printed to the console with the number of rows of the data
 \description{
 This function prints the number of rows of a data frame. This function is used
 to check that rows are not deleted or doubled unless expected.
+}
+\examples{
+check_rows(mtcars)
+
+
 }

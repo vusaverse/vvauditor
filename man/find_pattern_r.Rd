@@ -7,23 +7,17 @@
 find_pattern_r(pattern, path = ".", case.sensitive = TRUE, comments = FALSE)
 }
 \arguments{
-\item{pattern}{Pattern to search on}
+\item{pattern}{Pattern to search}
 
-\item{path}{de folder waar gezocht moet worden, default working directory}
+\item{path}{Directory to search in}
 
-\item{case.sensitive}{Whether pattern is case sensitve or ntot}
+\item{case.sensitive}{Whether pattern is case sensitive or not}
 
 \item{comments}{whether to search in commented lines}
 }
 \value{
-dataframe met R script paths
+Dataframe containing R script paths
 }
 \description{
 Function to search for a pattern in R scripts.
-}
-\examples{
-\dontrun{
-find_pattern_r(pattern = "DUO_", path = "05. Rapporten/")
-find_pattern_r("DUO_", c("05. Rapporten/", "02. Manipuleren/"))
-}
 }

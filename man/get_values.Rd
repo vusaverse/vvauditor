@@ -4,13 +4,21 @@
 \alias{get_values}
 \title{Get values of column}
 \usage{
-get_values(analyseset, column)
+get_values(df, column)
 }
 \arguments{
-\item{analyseset}{The analysisset}
+\item{df}{The dataframe}
 
 \item{column}{Column to get values from.}
 }
+\value{
+The class of the column values
+}
 \description{
 A function to determine what kind of values are present in columns.
+}
+\examples{
+get_values(mtcars, "mpg")
+
+
 }

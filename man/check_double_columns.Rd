@@ -13,8 +13,15 @@ check_double_columns(x, y, connector = NULL)
 
 \item{connector}{The connector columns as strings. Also possible as vector.}
 }
+\value{
+Message informing about overlap in columns between the dataframes.
+}
 \description{
 Check whether two dataframes have intersecting column names.
+}
+\examples{
+check_double_columns(mtcars, iris)
+
 }
 \seealso{
 Other tests: 

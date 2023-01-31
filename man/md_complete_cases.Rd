@@ -11,6 +11,17 @@ md_complete_cases(data, digits = 1)
 
 \item{digits}{Default: 1. number of digits for rounding.}
 }
+\value{
+Message with the number of rows, number of rows with missing values and the percentage of complete rows.
+}
 \description{
-Print the complete cases the de data.
+Print the complete cases of the data.
+}
+\examples{
+# example code
+md_complete_cases(iris)
+
+iris$Sepal.Length[5] <- NA_character_
+md_complete_cases(iris)
+
 }

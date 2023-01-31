@@ -11,8 +11,18 @@ unique_id(x, ...)
 
 \item{...}{optional variables, e.g. name of column or a vector of names.}
 }
+\value{
+Boolean whether variable is a unique identifier.
+}
 \description{
 Check if parsed variable is a unique identifier.
 This function was adapted from:
 Source: https://edwinth.github.io/blog/unique_id/
+}
+\examples{
+unique_id(iris, Species)
+
+mtcars$name <- rownames(mtcars)
+unique_id(mtcars, name)
+
 }

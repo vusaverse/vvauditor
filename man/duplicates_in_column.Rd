@@ -17,6 +17,10 @@ Rows containing duplicated values.
 \description{
 Searches for duplicates in a data frame column.
 }
+\examples{
+duplicates_in_column(mtcars, "mpg")
+
+}
 \seealso{
 Other tests: 
 \code{\link{check_double_columns}()},

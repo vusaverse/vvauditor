@@ -9,9 +9,16 @@ count_more_than_1(x)
 \arguments{
 \item{x}{The vector to test}
 }
+\value{
+Number of values greater than 1.
+}
 \description{
 Function to count the number of values greater than 1 in a vector
 This function is used in the function Check_columns_for_double_rows
 to count duplicate values.
+}
+\examples{
+count_more_than_1(c(1, 1, 4))
+
 }
 \concept{vector calculations}
