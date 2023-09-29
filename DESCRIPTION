@@ -14,7 +14,9 @@ RoxygenNote: 7.2.3
 Imports: 
     dplyr,
     findR,
+    kit,
     magrittr,
+    purrr,
     stats,
     stringr
 Suggests: 
