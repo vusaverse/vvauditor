@@ -1,5 +1,15 @@
 # vvauditor 
 
+  <!-- badges: start -->
+  [![R-CMD-check](https://github.com/vusaverse/vvauditor/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/vusaverse/vvauditor/actions/workflows/R-CMD-check.yaml)
+  <!-- badges: end -->
+
+[![CodeFactor](https://www.codefactor.io/repository/github/vusaverse/vvauditor/badge)](https://www.codefactor.io/repository/github/vusaverse/vvauditor)
+[![CRAN status](https://www.r-pkg.org/badges/version/vvauditor)](https://CRAN.R-project.org/package=vvauditor/)
+<a href="https://diffify.com/R/vvtableau" target="_blank"><img src="https://diffify.com/diffify-badge.svg" alt="The diffify page for the R package vvauditor" style="width: 100px; max-width: 100%;"></a>
+[![CRAN last month downloads](https://cranlogs.r-pkg.org/badges/last-month/vvauditor?color=green/)](https://cran.r-project.org/package=vvauditor/)
+[![CRAN last month downloads](https://cranlogs.r-pkg.org/badges/grand-total/vvauditor?color=green/)](https://cran.r-project.org/package=vvauditor/)
+
 The `vvauditor` package is an R package designed to validate the integrity of data by providing a comprehensive set of assertion tests. These tests allow users to check for specific conditions or properties within a dataset, ensuring the accuracy and reliability of the data. The package aims to facilitate quality control checks in data analysis workflows and assists in identifying and correcting any errors or inconsistencies in the data.
 
 # Installation
