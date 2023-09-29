@@ -31,10 +31,19 @@
     <loc>/reference/duplicates_in_column.html</loc>
   </url>
   <url>
+    <loc>/reference/find_common_columns.html</loc>
+  </url>
+  <url>
     <loc>/reference/find_pattern_r.html</loc>
   </url>
   <url>
     <loc>/reference/get_values.html</loc>
+  </url>
+  <url>
+    <loc>/reference/identify_join_pairs.html</loc>
+  </url>
+  <url>
+    <loc>/reference/identify_outliers.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>
