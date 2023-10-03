@@ -10,6 +10,7 @@
 #' @return The input data frame.
 #' @export
 assert_no_duplicates_in_group <- function(df, group_vars, assertion_fail = "stop") {
+  Number_rows <- NULL
   # Check whether the group variables exist in the data frame
   if (!all(group_vars %in% names(df))) {
     assertion_message(paste("Not enough columns to determine duplicate rows",
