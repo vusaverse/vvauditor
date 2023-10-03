@@ -15,7 +15,7 @@
 #' @export
 check_duplicates <- function(data, columns) {
   # Select the specified columns
-  selected_columns <- data %>% dplyr::select(all_of(columns))
+  selected_columns <- data %>% dplyr::select(dplyr::all_of(columns))
 
   # Remove duplicate rows
   unique_rows <- selected_columns %>% dplyr::distinct()
