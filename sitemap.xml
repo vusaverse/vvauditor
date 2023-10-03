@@ -16,6 +16,12 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/assert_no_duplicates_in_group.html</loc>
+  </url>
+  <url>
+    <loc>/reference/assertion_message.html</loc>
+  </url>
+  <url>
     <loc>/reference/check_double_columns.html</loc>
   </url>
   <url>
