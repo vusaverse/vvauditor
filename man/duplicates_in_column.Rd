@@ -24,6 +24,7 @@ duplicates_in_column(mtcars, "mpg")
 \seealso{
 Other tests: 
 \code{\link{check_double_columns}()},
+\code{\link{check_no_duplicates_in_group}()},
 \code{\link{check_numeric_or_integer_type}()},
 \code{\link{check_posixct_type}()},
 \code{\link{test_all_equal}()}

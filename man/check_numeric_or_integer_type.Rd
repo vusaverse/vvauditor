@@ -36,10 +36,12 @@ check_numeric_or_integer_type("a", dataframe)
 }
 \seealso{
 Other assertions: 
+\code{\link{check_no_duplicates_in_group}()},
 \code{\link{check_posixct_type}()}
 
 Other tests: 
 \code{\link{check_double_columns}()},
+\code{\link{check_no_duplicates_in_group}()},
 \code{\link{check_posixct_type}()},
 \code{\link{duplicates_in_column}()},
 \code{\link{test_all_equal}()}
