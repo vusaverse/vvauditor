@@ -26,8 +26,12 @@ dataframe <- data.frame(date = as.POSIXct("2023-10-04"))
 check_posixct_type("date", dataframe)
 }
 \seealso{
+Other assertions: 
+\code{\link{check_numeric_or_integer_type}()}
+
 Other tests: 
 \code{\link{check_double_columns}()},
+\code{\link{check_numeric_or_integer_type}()},
 \code{\link{duplicates_in_column}()},
 \code{\link{test_all_equal}()}
 }

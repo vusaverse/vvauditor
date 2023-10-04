@@ -25,6 +25,7 @@ check_double_columns(mtcars, iris)
 }
 \seealso{
 Other tests: 
+\code{\link{check_numeric_or_integer_type}()},
 \code{\link{check_posixct_type}()},
 \code{\link{duplicates_in_column}()},
 \code{\link{test_all_equal}()}

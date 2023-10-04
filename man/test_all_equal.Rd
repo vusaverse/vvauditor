@@ -26,6 +26,7 @@ test_all_equal(c(5, 6, 3))
 \seealso{
 Other tests: 
 \code{\link{check_double_columns}()},
+\code{\link{check_numeric_or_integer_type}()},
 \code{\link{check_posixct_type}()},
 \code{\link{duplicates_in_column}()}
 }
