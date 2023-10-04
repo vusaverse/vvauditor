@@ -34,7 +34,16 @@
     <loc>/reference/check_duplicates.html</loc>
   </url>
   <url>
+    <loc>/reference/check_na_columns.html</loc>
+  </url>
+  <url>
+    <loc>/reference/check_non_zero_rows.html</loc>
+  </url>
+  <url>
     <loc>/reference/check_rows.html</loc>
+  </url>
+  <url>
+    <loc>/reference/check_zero_columns.html</loc>
   </url>
   <url>
     <loc>/reference/count_more_than_1.html</loc>
@@ -92,6 +101,9 @@
   </url>
   <url>
     <loc>/reference/retrieve_string_assignments.html</loc>
+  </url>
+  <url>
+    <loc>/reference/return_assertions_message.html</loc>
   </url>
   <url>
     <loc>/reference/str_detect_in_file.html</loc>
