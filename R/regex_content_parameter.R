@@ -13,7 +13,9 @@
 #'
 #' @export
 regex_content_parameter <- function(parameter) {
-  base::paste0("(?<=",
-               parameter,
-               "\\s{0,20}\\=\\s{0,20}\").*")
+  base::paste0(
+    "(?<=",
+    parameter,
+    "\\s{0,20}\\=\\s{0,20}\").*"
+  )
 }

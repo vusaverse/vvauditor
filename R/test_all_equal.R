@@ -12,9 +12,9 @@
 #' @family tests
 #' @export
 test_all_equal <- function(x, na.rm = FALSE) {
-    if(!na.rm) {
-        return(length(unique(x)) <= 1)
-    } else {
-        return(length(unique(x[!is.na(x)])) <= 1)
-    }
+  if (!na.rm) {
+    return(length(unique(x)) <= 1)
+  } else {
+    return(length(unique(x[!is.na(x)])) <= 1)
+  }
 }

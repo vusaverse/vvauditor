@@ -24,15 +24,16 @@ retrieve_sourced_scripts <- function(script_name) {
     line <- file[i]
     # Extract the sourced file name and parameters using regex
     pattern <- stringr::str_extract(line,
-                                    pattern = "(?<=source\\(\")[^\"]+\\.R(?=\"\\))")
+      pattern = "(?<=source\\(\")[^\"]+\\.R(?=\"\\))"
+    )
     # If a source call is found
     if (!is.na(pattern)) {
       sourced_script <- c(sourced_script, pattern)
       # Check if the source call is commented out
       line_number <- c(line_number, i)
       # Check for conditional sourcing and loop sourcing
-      conditional_sourcing <- c(conditional_sourcing, any(grepl("\\b(if|else|switch)\\b", file[max(1, i-5):i])))
-      loop_sourcing <- c(loop_sourcing, any(grepl("\\b(for|while|repeat)\\b", file[max(1, i-5):i])))
+      conditional_sourcing <- c(conditional_sourcing, any(grepl("\\b(if|else|switch)\\b", file[max(1, i - 5):i])))
+      loop_sourcing <- c(loop_sourcing, any(grepl("\\b(for|while|repeat)\\b", file[max(1, i - 5):i])))
       # Check if the sourced script exists
       script_exists <- c(script_exists, file.exists(pattern))
       # Check if the source call is commented out
@@ -45,24 +46,28 @@ retrieve_sourced_scripts <- function(script_name) {
 
   # If no sourced scripts were found, create a data frame with NA values
   if (length(sourced_script) == 0) {
-    data_frame <- data.frame(main_script = script_name,
-                             sourced_script = NA,
-                             line_number = NA,
-                             commented_out = NA,
-                             conditional_sourcing = NA,
-                             loop_sourcing = NA,
-                             repeated_sourcing = NA,
-                             script_exists = NA)
+    data_frame <- data.frame(
+      main_script = script_name,
+      sourced_script = NA,
+      line_number = NA,
+      commented_out = NA,
+      conditional_sourcing = NA,
+      loop_sourcing = NA,
+      repeated_sourcing = NA,
+      script_exists = NA
+    )
   } else {
     # Create a dataframe
-    data_frame <- data.frame(main_script = script_name,
-                             sourced_script = sourced_script,
-                             line_number = line_number,
-                             commented_out = commented_out,
-                             conditional_sourcing = conditional_sourcing,
-                             loop_sourcing = loop_sourcing,
-                             repeated_sourcing = repeated_sourcing,
-                             script_exists = script_exists)
+    data_frame <- data.frame(
+      main_script = script_name,
+      sourced_script = sourced_script,
+      line_number = line_number,
+      commented_out = commented_out,
+      conditional_sourcing = conditional_sourcing,
+      loop_sourcing = loop_sourcing,
+      repeated_sourcing = repeated_sourcing,
+      script_exists = script_exists
+    )
   }
 
   # Return the dataframe

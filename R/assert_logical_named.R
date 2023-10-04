@@ -17,6 +17,7 @@
 #' @export
 assert_logical_named <- function(column, df, prefix_column = NULL, ...) {
   checkmate::assert_logical(df[[column]],
-                            .var.name =  trimws(paste(prefix_column, column)),
-                            ...)
+    .var.name = trimws(paste(prefix_column, column)),
+    ...
+  )
 }

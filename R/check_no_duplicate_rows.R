@@ -16,9 +16,10 @@
 check_no_duplicate_rows <- function(dataframe, collection, unique_columns = NULL) {
   if (!is.null(unique_columns) && !checkmate::testNames(unique_columns, subset.of = names(dataframe))) {
     collection$push(paste("Insufficient columns to determine duplicate rows",
-                          "The following columns are missing:",
-                          paste(setdiff(unique_columns, names(dataframe)), collapse = "\n"),
-                          sep = "\n"))
+      "The following columns are missing:",
+      paste(setdiff(unique_columns, names(dataframe)), collapse = "\n"),
+      sep = "\n"
+    ))
     return(collection)
   }
 

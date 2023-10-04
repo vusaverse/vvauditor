@@ -13,11 +13,14 @@ assert_no_duplicates_in_group <- function(df, group_vars, assertion_fail = "stop
   Number_rows <- NULL
   # Check whether the group variables exist in the data frame
   if (!all(group_vars %in% names(df))) {
-    assertion_message(paste("Not enough columns to determine duplicate rows",
-                            "The following columns are missing:",
-                            paste(setdiff(group_vars, names(df)), collapse = "\n"),
-                            sep = "\n"),
-                      assertion_fail = assertion_fail)
+    assertion_message(
+      paste("Not enough columns to determine duplicate rows",
+        "The following columns are missing:",
+        paste(setdiff(group_vars, names(df)), collapse = "\n"),
+        sep = "\n"
+      ),
+      assertion_fail = assertion_fail
+    )
   }
 
   # Check whether the group variables exist in the data frame
@@ -38,10 +41,12 @@ assert_no_duplicates_in_group <- function(df, group_vars, assertion_fail = "stop
     variables <- paste(group_vars, collapse = ", ")
     # If number of duplicates is more than 0, it will be displayed in the assert message.
     if (Count_doubles > 0) {
-      result <- paste("In the combination of the columns", variables, "there are",
-                      Count_doubles,
-                      "rows that appear more often. The total number of duplicated rows is",
-                      Total_double)
+      result <- paste(
+        "In the combination of the columns", variables, "there are",
+        Count_doubles,
+        "rows that appear more often. The total number of duplicated rows is",
+        Total_double
+      )
       assertion_message(result, assertion_fail)
     }
   }

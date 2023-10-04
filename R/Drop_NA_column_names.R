@@ -7,5 +7,5 @@
 #' @return dataframe without columns that are NA
 #' @export
 drop_na_column_names <- function(x) {
-    return(x[!is.na(names(x)) & !(names(x) == "")])
+  return(x[!is.na(names(x)) & !(names(x) == "")])
 }

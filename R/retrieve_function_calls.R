@@ -19,7 +19,8 @@ retrieve_function_calls <- function(script_name) {
   for (i in 1:length(file)) {
     # Extract the function names and arguments using regex
     pattern <- stringr::str_match(file[i],
-                                  pattern = "(\\w+)\\s*<-\\s*function\\((.*)\\)\\s*\\{")
+      pattern = "(\\w+)\\s*<-\\s*function\\((.*)\\)\\s*\\{"
+    )
     # If a function definition is found
     if (!is.na(pattern[1, 1])) {
       function_name <- c(function_name, pattern[1, 2])
@@ -49,16 +50,20 @@ retrieve_function_calls <- function(script_name) {
 
   # If no function definitions were found, create a data frame with NA values
   if (length(function_name) == 0) {
-    data_frame <- data.frame(main_script = script_name,
-                             function_name = NA,
-                             arguments = NA,
-                             function_body = NA)
+    data_frame <- data.frame(
+      main_script = script_name,
+      function_name = NA,
+      arguments = NA,
+      function_body = NA
+    )
   } else {
     # Create a dataframe
-    data_frame <- data.frame(main_script = script_name,
-                             function_name = function_name,
-                             arguments = arguments,
-                             function_body = function_body)
+    data_frame <- data.frame(
+      main_script = script_name,
+      function_name = function_name,
+      arguments = arguments,
+      function_body = function_body
+    )
   }
 
   # Return the dataframe

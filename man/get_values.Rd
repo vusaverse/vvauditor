@@ -20,5 +20,4 @@ A function to determine what kind of values are present in columns.
 \examples{
 get_values(mtcars, "mpg")
 
-
 }

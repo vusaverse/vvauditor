@@ -34,19 +34,18 @@
 #'
 #' @export
 regex_year_date <- function(format = "yyyy") {
-  formats <- c("yyyy" = "^\\d{4}$",
-               "yyyy-MM-dd" = "^\\d{4}-\\d{2}-\\d{2}$",
-               "yyyy/MM/dd" = "^\\d{4}/\\d{2}/\\d{2}$",
-               "yyyy.MM.dd" = "^\\d{4}\\.\\d{2}\\.\\d{2}$",
-               "yyyy-M-d" = "^\\d{4}-\\d{1,2}-\\d{1,2}$",
-               "yyyy/M/d" = "^\\d{4}/\\d{1,2}/\\d{1,2}$",
-               "yyyy.M.d" = "^\\d{4}\\.\\d{1,2}\\.\\d{1,2}$",
-               "yyyy-MM-dd HH:mm:ss" = "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$",
-               "yyyy/MM/dd HH:mm:ss" = "^\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}$",
-               "yyyy-MM-dd HH:mm" = "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}$",
-               "yyyy/MM/dd HH:mm" = "^\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}$"
+  formats <- c(
+    "yyyy" = "^\\d{4}$",
+    "yyyy-MM-dd" = "^\\d{4}-\\d{2}-\\d{2}$",
+    "yyyy/MM/dd" = "^\\d{4}/\\d{2}/\\d{2}$",
+    "yyyy.MM.dd" = "^\\d{4}\\.\\d{2}\\.\\d{2}$",
+    "yyyy-M-d" = "^\\d{4}-\\d{1,2}-\\d{1,2}$",
+    "yyyy/M/d" = "^\\d{4}/\\d{1,2}/\\d{1,2}$",
+    "yyyy.M.d" = "^\\d{4}\\.\\d{1,2}\\.\\d{1,2}$",
+    "yyyy-MM-dd HH:mm:ss" = "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$",
+    "yyyy/MM/dd HH:mm:ss" = "^\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}$",
+    "yyyy-MM-dd HH:mm" = "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}$",
+    "yyyy/MM/dd HH:mm" = "^\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}$"
   )
   return(formats[format])
 }
-
-

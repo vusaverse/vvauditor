@@ -22,8 +22,10 @@ identify_join_pairs <- function(..., cutoff = 0.20) {
   df <- expand.grid(A = names(as.data.frame(args[1])), o = names(as.data.frame(args[2])))
 
   check_candidate_score_internal <- function(col1, col2) {
-    score <- length(intersect(kit::funique(as.data.frame(args[1])[[col1]]),
-                              kit::funique(as.data.frame(args[2])[[col2]]))) /
+    score <- length(intersect(
+      kit::funique(as.data.frame(args[1])[[col1]]),
+      kit::funique(as.data.frame(args[2])[[col2]])
+    )) /
       length(kit::funique(as.data.frame(args[1])[[col1]]))
     return(score)
   }

@@ -11,16 +11,16 @@
 #' @family tests
 #' @export
 check_double_columns <- function(x, y, connector = NULL) {
-    Differences <- intersect(names(x), names(y))
+  Differences <- intersect(names(x), names(y))
 
-    Differences_without_connector <- setdiff(Differences, connector)
+  Differences_without_connector <- setdiff(Differences, connector)
 
-    Differences_count <- length(Differences_without_connector)
+  Differences_count <- length(Differences_without_connector)
 
-    if (Differences_count > 0) {
-        message(paste(Differences_without_connector, collapse = "\n"))
-        stop("Overlap in column names")
-    } else {
-      message("There are no overlapping columns between the dataframes")
-    }
+  if (Differences_count > 0) {
+    message(paste(Differences_without_connector, collapse = "\n"))
+    stop("Overlap in column names")
+  } else {
+    message("There are no overlapping columns between the dataframes")
+  }
 }

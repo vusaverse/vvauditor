@@ -1,4 +1,4 @@
-#'Count more than 1
+#' Count more than 1
 #'
 #' Function to count the number of values greater than 1 in a vector
 #' This function is used in the function Check_columns_for_double_rows

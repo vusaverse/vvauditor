@@ -17,6 +17,7 @@
 #' @export
 check_posixct_type <- function(column_name, dataframe, column_prefix = NULL, ...) {
   checkmate::assert_posixct(dataframe[[column_name]],
-                            .var.name = trimws(paste(column_prefix, column_name)),
-                            ...)
+    .var.name = trimws(paste(column_prefix, column_name)),
+    ...
+  )
 }

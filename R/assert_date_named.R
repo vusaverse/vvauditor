@@ -12,6 +12,7 @@
 #' @export
 assert_date_named <- function(column, df, prefix_column = NULL, ...) {
   checkmate::assert_date(df[[column]],
-                         .var.name = trimws(paste(prefix_column, column)),
-                         ...)
+    .var.name = trimws(paste(prefix_column, column)),
+    ...
+  )
 }

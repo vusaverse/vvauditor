@@ -21,5 +21,4 @@ to check that rows are not deleted or doubled unless expected.
 \examples{
 check_rows(mtcars)
 
-
 }

@@ -9,28 +9,26 @@
 #' @return Boolean whether pattern exists in file.
 #' @export
 str_detect_in_file <- function(file, pattern, only_comments = FALSE, collapse = FALSE) {
+  Lines <- readLines(file, warn = FALSE)
 
-    Lines <- readLines(file, warn = FALSE)
-
-    if (!collapse) {
-        if (only_comments) {
-            Search_line <- stringr::str_detect(Lines, "^\\s*#")
-        } else {
-            Search_line <- T
-        }
-
-        Result <- any(stringr::str_detect(Lines[Search_line], pattern = pattern))
-
+  if (!collapse) {
+    if (only_comments) {
+      Search_line <- stringr::str_detect(Lines, "^\\s*#")
     } else {
-        Lines_collapsed <- paste(c(Lines, ""), collapse = "\n")
-
-
-        Result <- stringr::str_detect(Lines_collapsed, pattern = pattern)
+      Search_line <- T
     }
 
-    if (is.na(Result)) {
-        Result <- FALSE
-    }
+    Result <- any(stringr::str_detect(Lines[Search_line], pattern = pattern))
+  } else {
+    Lines_collapsed <- paste(c(Lines, ""), collapse = "\n")
 
-    return(Result)
+
+    Result <- stringr::str_detect(Lines_collapsed, pattern = pattern)
+  }
+
+  if (is.na(Result)) {
+    Result <- FALSE
+  }
+
+  return(Result)
 }

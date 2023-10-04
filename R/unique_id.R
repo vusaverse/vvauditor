@@ -15,15 +15,15 @@
 #'
 #' @export
 unique_id <- function(x, ...) {
-    id_set <- x %>% dplyr::select(...)
+  id_set <- x %>% dplyr::select(...)
 
-    id_set_dist <- id_set %>% dplyr::distinct()
+  id_set_dist <- id_set %>% dplyr::distinct()
 
-    print(id_set_dist)
+  print(id_set_dist)
 
-    if (nrow(id_set) == nrow(id_set_dist)) {
-        return(TRUE)
-    } else {
-        return(FALSE)
-    }
+  if (nrow(id_set) == nrow(id_set_dist)) {
+    return(TRUE)
+  } else {
+    return(FALSE)
+  }
 }

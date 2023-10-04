@@ -1,6 +1,6 @@
-#'Check rows
+#' Check rows
 #'
-#'This function prints the number of rows of a data frame. This function is used
+#' This function prints the number of rows of a data frame. This function is used
 #' to check that rows are not deleted or doubled unless expected.
 #'
 #' @param df The data frame whose rows are to be counted
@@ -8,12 +8,11 @@
 #' @examples
 #' check_rows(mtcars)
 #'
-#'
 #' @return A message is printed to the console with the number of rows of the data
 #' @export
 check_rows <- function(df, name = NULL) {
   if (is.null(name)) {
     name <- deparse(substitute(df))
   }
-  print(paste("Number of rows of the ", name , ": ", nrow(df), sep=""))
+  print(paste("Number of rows of the ", name, ": ", nrow(df), sep = ""))
 }

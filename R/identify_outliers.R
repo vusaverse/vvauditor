@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' df <- data.frame(a = c(1, 2, 3, 100, 101), b = c(4, 5, 6, 7, 8), c = c(7, 8, 9, 100, 101))
-#' outliers <- identify_outliers(df, 'a')
+#' outliers <- identify_outliers(df, "a")
 #' print(outliers)
 #'
 #' @export

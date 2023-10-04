@@ -88,8 +88,8 @@ return_assertions_message <- function(collection, collection_name, fail = "stop"
 check_na_columns <- function(df, collection) {
   p_na <- variable <- NULL
   na_percentage <- data.frame(p_na = round(100 * sapply(df, function(x) sum(is.na(x))) / nrow(df), 2))
-  na_percentage$variable = rownames(na_percentage)
-  rownames(na_percentage) = NULL
+  na_percentage$variable <- rownames(na_percentage)
+  rownames(na_percentage) <- NULL
 
   if (any(na_percentage$p_na == 100)) {
     columns <- na_percentage %>%
@@ -118,13 +118,15 @@ check_na_columns <- function(df, collection) {
 #' check_zero_columns(dataframe, collection)
 #' @export
 check_zero_columns <- function(dataframe, collection) {
-  percentage_zeros <- variable <- p_zeros <-  NULL
+  percentage_zeros <- variable <- p_zeros <- NULL
 
   ## Create dataframe with percentage 0 per column
-  df_zeros = data.frame(p_zeros = round(100 * sapply(dataframe,
-                                                     function(x) sum(x == 0, na.rm = T)) / nrow(dataframe), 2))
-  df_zeros$variable = rownames(df_zeros)
-  rownames(df_zeros) = NULL
+  df_zeros <- data.frame(p_zeros = round(100 * sapply(
+    dataframe,
+    function(x) sum(x == 0, na.rm = T)
+  ) / nrow(dataframe), 2))
+  df_zeros$variable <- rownames(df_zeros)
+  rownames(df_zeros) <- NULL
 
   if (any(df_zeros$p_zeros == 100)) {
     columns <- df_zeros %>%
@@ -158,4 +160,3 @@ check_non_zero_rows <- function(dataframe, collection) {
   }
   return(collection)
 }
-

@@ -18,7 +18,8 @@ retrieve_string_assignments <- function(script_name) {
   for (line in file) {
     # Extract the object names and strings using regex
     pattern <- stringr::str_match(line,
-                                  pattern = "(\\w+)\\s*<-\\s*\"(.*)\"")
+      pattern = "(\\w+)\\s*<-\\s*\"(.*)\""
+    )
     # If a string assignment is found
     if (!is.na(pattern[1, 1])) {
       object_name <- c(object_name, pattern[1, 2])
@@ -28,14 +29,18 @@ retrieve_string_assignments <- function(script_name) {
 
   # If no string assignments were found, create a data frame with NA values
   if (length(object_name) == 0) {
-    data_frame <- data.frame(main_script = script_name,
-                             object_name = NA,
-                             string = NA)
+    data_frame <- data.frame(
+      main_script = script_name,
+      object_name = NA,
+      string = NA
+    )
   } else {
     # Create a dataframe
-    data_frame <- data.frame(main_script = script_name,
-                             object_name = object_name,
-                             string = string)
+    data_frame <- data.frame(
+      main_script = script_name,
+      object_name = object_name,
+      string = string
+    )
   }
 
   # Return the dataframe
