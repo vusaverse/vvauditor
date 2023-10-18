@@ -46,7 +46,7 @@ between the distinct values in their columns. It returns a data frame showing th
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">identify_join_pairs</span><span class="op">(</span><span class="va">...</span>, cutoff <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">identify_join_pairs</span><span class="op">(</span><span class="va">...</span>, similarity_cutoff <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -55,7 +55,7 @@ between the distinct values in their columns. It returns a data frame showing th
 <dd><p>A list of two data frames.</p></dd>
 
 
-<dt>cutoff</dt>
+<dt>similarity_cutoff</dt>
 <dd><p>The minimal percentage of overlap between the distinct values in the columns.</p></dd>
 
 </dl></div>
@@ -68,12 +68,30 @@ between the distinct values in their columns. It returns a data frame showing th
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">df1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, b <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">df2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fl">8</span>, <span class="fl">9</span><span class="op">)</span>, b <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">11</span>, <span class="fl">12</span><span class="op">)</span>, c <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">13</span>, <span class="fl">14</span>, <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">candidate_pairs</span> <span class="op">&lt;-</span> <span class="fu">identify_join_pairs</span><span class="op">(</span><span class="va">df1</span>, <span class="va">df2</span>, cutoff <span class="op">=</span> <span class="fl">0.20</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">candidate_pairs</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] A     o     score</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;0 rows&gt; (or 0-length row.names)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">identify_join_pairs</span><span class="op">(</span><span class="va">iris</span>, <span class="va">iris3</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    data_frame1_column  data_frame2_column     score</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         Sepal.Width     Sepal W..Setosa 0.6956522</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         Sepal.Width Sepal W..Versicolor 0.6086957</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3        Sepal.Length Sepal L..Versicolor 0.6000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4        Sepal.Length  Sepal L..Virginica 0.6000000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5        Sepal.Length  Petal L..Virginica 0.5714286</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         Sepal.Width  Sepal W..Virginica 0.5652174</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7         Petal.Width  Petal W..Virginica 0.5454545</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8         Sepal.Width Petal L..Versicolor 0.4782609</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9        Petal.Length  Petal L..Virginica 0.4651163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10       Petal.Length Petal L..Versicolor 0.4418605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11       Sepal.Length     Sepal L..Setosa 0.4285714</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12        Petal.Width     Petal L..Setosa 0.4090909</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13        Petal.Width Petal W..Versicolor 0.4090909</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14       Petal.Length Sepal L..Versicolor 0.3953488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15       Petal.Length     Sepal L..Setosa 0.3488372</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16        Petal.Width     Petal W..Setosa 0.2727273</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17       Sepal.Length Petal L..Versicolor 0.2571429</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18       Petal.Length     Sepal W..Setosa 0.2558140</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19       Petal.Length  Sepal L..Virginica 0.2558140</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20        Petal.Width Sepal W..Versicolor 0.2272727</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21        Sepal.Width  Petal W..Virginica 0.2173913</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22       Petal.Length     Petal L..Setosa 0.2093023</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
