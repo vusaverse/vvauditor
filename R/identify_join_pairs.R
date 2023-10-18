@@ -4,37 +4,32 @@
 #' between the distinct values in their columns. It returns a data frame showing the possible join pairs.
 #'
 #' @param ... A list of two data frames.
-#' @param cutoff The minimal percentage of overlap between the distinct values in the columns.
+#' @param similarity_cutoff The minimal percentage of overlap between the distinct values in the columns.
 #'
 #' @return A data frame showing candidate join pairs.
 #'
 #' @examples
-#' df1 <- data.frame(a = c(1, 2, 3), b = c(4, 5, 6))
-#' df2 <- data.frame(a = c(7, 8, 9), b = c(10, 11, 12), c = c(13, 14, 15))
-#' candidate_pairs <- identify_join_pairs(df1, df2, cutoff = 0.20)
-#' print(candidate_pairs)
+#' identify_join_pairs(iris, iris3)
 #'
 #' @export
-identify_join_pairs <- function(..., cutoff = 0.20) {
-  A <- o <- score <- NULL
-  args <- list(...)
+identify_join_pairs <- function(..., similarity_cutoff = 0.20) {
+  data_frame1_column <- data_frame2_column <- score <- NULL
+  data_frames <- list(...)
 
-  df <- expand.grid(A = names(as.data.frame(args[1])), o = names(as.data.frame(args[2])))
+  df_pairs <- expand.grid(data_frame1_column = names(as.data.frame(data_frames[[1]])),
+                          data_frame2_column = names(as.data.frame(data_frames[[2]])))
 
-  check_candidate_score_internal <- function(col1, col2) {
-    score <- length(intersect(
-      kit::funique(as.data.frame(args[1])[[col1]]),
-      kit::funique(as.data.frame(args[2])[[col2]])
-    )) /
-      length(kit::funique(as.data.frame(args[1])[[col1]]))
-    return(score)
+  calculate_similarity_score <- function(column1, column2) {
+    unique_values_df1 <- stats::na.omit(kit::funique(as.data.frame(data_frames[[1]])[[column1]]))
+    unique_values_df2 <- stats::na.omit(kit::funique(as.data.frame(data_frames[[2]])[[column2]]))
+    similarity_score <- length(intersect(unique_values_df1, unique_values_df2)) / length(unique_values_df1)
+    return(similarity_score)
   }
 
-  df <- df %>%
-    dplyr::mutate(score = purrr::map2(.x = A, .y = o, .f = check_candidate_score_internal)) %>%
-    dplyr::filter(score > cutoff) %>%
-    dplyr::mutate(score = as.numeric(score)) %>%
+  df_pairs <- df_pairs %>%
+    dplyr::mutate(score = purrr::map2_dbl(.x = data_frame1_column, .y = data_frame2_column, .f = calculate_similarity_score)) %>%
+    dplyr::filter(score > similarity_cutoff) %>%
     dplyr::arrange(dplyr::desc(score))
 
-  return(df)
+  return(df_pairs)
 }

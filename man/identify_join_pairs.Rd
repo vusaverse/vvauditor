@@ -4,12 +4,12 @@
 \alias{identify_join_pairs}
 \title{Identify Possible Join Pairs Between Data Frames}
 \usage{
-identify_join_pairs(..., cutoff = 0.2)
+identify_join_pairs(..., similarity_cutoff = 0.2)
 }
 \arguments{
 \item{...}{A list of two data frames.}
 
-\item{cutoff}{The minimal percentage of overlap between the distinct values in the columns.}
+\item{similarity_cutoff}{The minimal percentage of overlap between the distinct values in the columns.}
 }
 \value{
 A data frame showing candidate join pairs.
@@ -19,9 +19,6 @@ This function identifies potential join pairs between two data frames based on t
 between the distinct values in their columns. It returns a data frame showing the possible join pairs.
 }
 \examples{
-df1 <- data.frame(a = c(1, 2, 3), b = c(4, 5, 6))
-df2 <- data.frame(a = c(7, 8, 9), b = c(10, 11, 12), c = c(13, 14, 15))
-candidate_pairs <- identify_join_pairs(df1, df2, cutoff = 0.20)
-print(candidate_pairs)
+identify_join_pairs(iris, iris3)
 
 }
