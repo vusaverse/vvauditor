@@ -28,6 +28,9 @@
     <loc>/reference/assertion_message.html</loc>
   </url>
   <url>
+    <loc>/reference/calculate_category_percentages.html</loc>
+  </url>
+  <url>
     <loc>/reference/check_double_columns.html</loc>
   </url>
   <url>
@@ -61,6 +64,9 @@
     <loc>/reference/count_more_than_1.html</loc>
   </url>
   <url>
+    <loc>/reference/create_dataset_summary_table.html</loc>
+  </url>
+  <url>
     <loc>/reference/drop_na_column_names.html</loc>
   </url>
   <url>
@@ -70,7 +76,19 @@
     <loc>/reference/find_common_columns.html</loc>
   </url>
   <url>
+    <loc>/reference/find_maximum_value.html</loc>
+  </url>
+  <url>
+    <loc>/reference/find_minimum_value.html</loc>
+  </url>
+  <url>
     <loc>/reference/find_pattern_r.html</loc>
+  </url>
+  <url>
+    <loc>/reference/get_distribution_statistics.html</loc>
+  </url>
+  <url>
+    <loc>/reference/get_first_element_class.html</loc>
   </url>
   <url>
     <loc>/reference/get_values.html</loc>
@@ -83,6 +101,9 @@
   </url>
   <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/is_unique_column.html</loc>
   </url>
   <url>
     <loc>/reference/md_complete_cases.html</loc>
