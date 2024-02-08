@@ -1,0 +1,111 @@
+---
+title: "Creating Dataset Summary Tables"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{dataset-summary}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Overview
+
+The `create_dataset_summary_table` function is a powerful tool for data analysts who need to quickly assess the structure and content of their datasets. This vignette will guide you through the process of using this function and its auxiliary functions to generate a comprehensive summary of any dataframe.
+
+# Getting Started
+
+First, let's load the necessary libraries and our custom package:
+
+```{r setup}
+library(vvauditor)
+```
+
+# Creating The Summary Table
+
+The primary function, `create_dataset_summary_table`, generates a summary statistics table for a given dataframe. Let's use the built-in mtcars dataset to see how it works:
+
+```{r summary}
+summary_table <- create_dataset_summary_table(mtcars)
+summary_table
+
+```
+
+The resulting table provides detailed information about each column, such as the data type, missing value percentage, range of values, and more.
+
+# Helper Functions
+
+The create_dataset_summary_table function relies on several helper functions to perform specific tasks:
+
+-   `get_first_element_class`: Determines the class of the first element in a vector.
+-   `find_minimum_value`: Locates the minimum numeric value in a vector.
+-   `find_maximum_value`: Finds the maximum numeric value in a vector.
+-   `is_unique_column`: Checks whether a column contains unique values.
+-   `get_distribution_statistics`: Computes distribution statistics for numeric vectors.
+-   `calculate_category_percentages`: Calculates the percentage of categories in a data vector.
+
+Each of these functions plays a crucial role in constructing the final summary table. We will explore each one in more detail in the following sections.
+
+## get_first_element_class
+
+This function helps identify the data type of each column in the dataframe:
+
+```{r get_first_element_class}
+## Example usage
+
+get_first_element_class(mtcars$mpg) # "numeric"
+```
+
+## find_minimum_value and find_maximum_value
+
+These functions assist in determining the range of values for numeric columns:
+
+```{r min_max}
+# Example usage
+
+find_minimum_value(mtcars$hp) # Minimum horsepower 
+find_maximum_value(mtcars$disp) # Maximum displacement
+```
+
+## is_unique_column
+
+With this function, you can easily check for uniqueness in a particular column:
+
+```{r unique}
+# Example usage
+
+is_unique_column("cyl", mtcars) # Are cylinder numbers unique?
+
+```
+
+## get_distribution_statistics
+
+This function provides descriptive statistics for numeric columns:
+
+```{r distribution}
+# Example usage
+
+get_distribution_statistics(mtcars$wt) # Distribution statistics for weight
+
+```
+
+## calculate_category_percentages
+
+Lastly, this function calculates the percentage breakdown of categories in a data vector:
+
+```{r percentages}
+
+# Example usage
+
+calculate_category_percentages(mtcars$gear) # Category percentages for gears
+
+```
+
+# Conclusion
+
+The create_dataset_summary_table function and its companion functions offer a convenient way to gain immediate insights into the structure and content of your data. By understanding and utilizing these tools, you can expedite your data exploration process and make more informed decisions during your analysis.
