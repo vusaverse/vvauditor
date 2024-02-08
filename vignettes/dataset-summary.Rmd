@@ -1,6 +1,8 @@
 ---
 title: "Creating Dataset Summary Tables"
-output: rmarkdown::html_vignette
+output: 
+  html_document:
+    df_print: paged
 vignette: >
   %\VignetteIndexEntry{dataset-summary}
   %\VignetteEngine{knitr::rmarkdown}
@@ -30,7 +32,7 @@ library(vvauditor)
 
 The primary function, `create_dataset_summary_table`, generates a summary statistics table for a given dataframe. Let's use the built-in mtcars dataset to see how it works:
 
-```{r summary}
+```{r summary, cols.print=5}
 summary_table <- create_dataset_summary_table(mtcars)
 summary_table
 
@@ -108,4 +110,4 @@ calculate_category_percentages(mtcars$gear) # Category percentages for gears
 
 # Conclusion
 
-The create_dataset_summary_table function and its companion functions offer a convenient way to gain immediate insights into the structure and content of your data. By understanding and utilizing these tools, you can expedite your data exploration process and make more informed decisions during your analysis.
+The `create_dataset_summary_table` function and its companion functions offer a convenient way to gain immediate insights into the structure and content of your data. By understanding and utilizing these tools, you can expedite your data exploration process and make more informed decisions during your analysis.
