@@ -4,6 +4,7 @@
 [![R-CMD-check](https://github.com/vusaverse/vvauditor/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/vusaverse/vvauditor/actions/workflows/R-CMD-check.yaml)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/vusaverse/vvauditor/badge)](https://www.codefactor.io/repository/github/vusaverse/vvauditor)
+[![Codecov test coverage](https://codecov.io/gh/vusaverse/vvauditor/branch/master/graph/badge.svg)](https://app.codecov.io/gh/vusaverse/vvauditor?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/vvauditor)](https://CRAN.R-project.org/package=vvauditor/)
 <a href="https://diffify.com/R/vvauditor" target="_blank"><img src="https://diffify.com/diffify-badge.svg" alt="The diffify page for the R package vvauditor" style="width: 100px; max-width: 100%;"></a>
 [![CRAN last month downloads](https://cranlogs.r-pkg.org/badges/last-month/vvauditor?color=green/)](https://cran.r-project.org/package=vvauditor/)
