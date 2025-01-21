@@ -23,14 +23,18 @@ assert_field_consistency <- function(new_data, field_info) {
   # Check for fields in metadata that are missing in the new data
   missing_fields <- setdiff(metadata_fields, data_fields)
   if (length(missing_fields) > 0) {
-    warning(sprintf("The following fields from the metadata are missing in the new data: %s",
-                    paste(missing_fields, collapse = ", ")))
+    warning(sprintf(
+      "The following fields from the metadata are missing in the new data: %s",
+      paste(missing_fields, collapse = ", ")
+    ))
   }
 
   # Check for new fields in the data that are not in the metadata
   new_fields <- setdiff(data_fields, metadata_fields)
   if (length(new_fields) > 0) {
-    warning(sprintf("The following new fields in the data are not accounted for in the metadata: %s",
-                    paste(new_fields, collapse = ", ")))
+    warning(sprintf(
+      "The following new fields in the data are not accounted for in the metadata: %s",
+      paste(new_fields, collapse = ", ")
+    ))
   }
 }

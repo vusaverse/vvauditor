@@ -18,8 +18,10 @@ assert_range_validation <- function(data, metadata) {
       upper <- metadata$max[i]
 
       if (!all(data[[field]] >= lower & data[[field]] <= upper, na.rm = TRUE)) {
-        warning(sprintf("Range violation in field '%s' (preferred name: '%s'): values outside [%s, %s]",
-                        field, metadata$preferred_field_name[i], lower, upper))
+        warning(sprintf(
+          "Range violation in field '%s' (preferred name: '%s'): values outside [%s, %s]",
+          field, metadata$preferred_field_name[i], lower, upper
+        ))
       }
     }
   }

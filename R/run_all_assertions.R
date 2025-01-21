@@ -29,13 +29,16 @@ run_all_assertions <- function(new_data, output_dir) {
     dplyr::left_join(data_types, by = "preferred_field_name")
 
   # Run all assertions with warning handling
-  withCallingHandlers({
-    assert_range_validation(new_data, metadata)
-    assert_type_consistency(new_data, metadata)
-    assert_missing_values(new_data, metadata)
-    assert_field_consistency(new_data, field_info)
-    assert_field_distinctness(new_data, metadata)
-  }, warning = warning_handler)
+  withCallingHandlers(
+    {
+      assert_range_validation(new_data, metadata)
+      assert_type_consistency(new_data, metadata)
+      assert_missing_values(new_data, metadata)
+      assert_field_consistency(new_data, field_info)
+      assert_field_distinctness(new_data, metadata)
+    },
+    warning = warning_handler
+  )
 
   # Check if any warnings were produced
   if (length(warnings_list) > 0) {
@@ -44,13 +47,11 @@ run_all_assertions <- function(new_data, output_dir) {
 
     # Combine all warnings into a single message with a numbered list
     warning_message <- paste("The following warnings were produced:",
-                             paste(numbered_warnings, collapse = "\n"),
-                             sep = "\n\n")
+      paste(numbered_warnings, collapse = "\n"),
+      sep = "\n\n"
+    )
 
     # Stop execution with the combined warning message
     stop(warning_message, call. = FALSE)
   }
 }
-
-
-

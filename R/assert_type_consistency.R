@@ -18,8 +18,10 @@ assert_type_consistency <- function(data, metadata) {
       actual_type <- class(data[[field]])[1]
 
       if (expected_type != actual_type) {
-        warning(sprintf("Type inconsistency in field '%s' (preferred name: '%s'): expected %s, got %s",
-                        field, metadata$preferred_field_name[i], expected_type, actual_type))
+        warning(sprintf(
+          "Type inconsistency in field '%s' (preferred name: '%s'): expected %s, got %s",
+          field, metadata$preferred_field_name[i], expected_type, actual_type
+        ))
       }
     }
   }

@@ -16,8 +16,10 @@ identify_join_pairs <- function(..., similarity_cutoff = 0.20) {
   data_frame1_column <- data_frame2_column <- score <- NULL
   data_frames <- list(...)
 
-  df_pairs <- expand.grid(data_frame1_column = names(as.data.frame(data_frames[[1]])),
-                          data_frame2_column = names(as.data.frame(data_frames[[2]])))
+  df_pairs <- expand.grid(
+    data_frame1_column = names(as.data.frame(data_frames[[1]])),
+    data_frame2_column = names(as.data.frame(data_frames[[2]]))
+  )
 
   calculate_similarity_score <- function(column1, column2) {
     unique_values_df1 <- stats::na.omit(kit::funique(as.data.frame(data_frames[[1]])[[column1]]))

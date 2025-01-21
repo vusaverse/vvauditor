@@ -21,13 +21,15 @@ assert_missing_values <- function(data, metadata) {
       current_missing_percentage <- mean(is.na(data[[field]])) * 100
       current_count_of_valid_values <- sum(!is.na(data[field]))
 
-      if (abs(current_missing_percentage - documented_missing_percentage) > 0.01) {  # Allow for small floating-point differences
-        warning(sprintf("Mismatch in percentage of missing values for field '%s' (preferred name: '%s'):
+      if (abs(current_missing_percentage - documented_missing_percentage) > 0.01) { # Allow for small floating-point differences
+        warning(sprintf(
+          "Mismatch in percentage of missing values for field '%s' (preferred name: '%s'):
                         Documented: %.2f%%, Current: %.2f%%. %s values should be valid, but only %s were found.",
-                        field, metadata$preferred_field_name[i],
-                        documented_missing_percentage, current_missing_percentage,
-                        documented_count_of_valid_values,
-                        current_count_of_valid_values))
+          field, metadata$preferred_field_name[i],
+          documented_missing_percentage, current_missing_percentage,
+          documented_count_of_valid_values,
+          current_count_of_valid_values
+        ))
       }
     }
   }
