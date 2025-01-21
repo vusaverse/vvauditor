@@ -13,7 +13,7 @@
 #' @export
 
 assert_missing_values <- function(data, metadata) {
-  for (i in 1:nrow(metadata)) {
+  for (i in seq_len(nrow(metadata))) {
     field <- metadata$raw_field_name[i]
     if (field %in% names(data)) {
       documented_missing_percentage <- metadata$percentage_of_missing_values[i]

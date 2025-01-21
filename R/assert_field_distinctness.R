@@ -12,7 +12,6 @@
 assert_field_distinctness <- function(new_data, metadata){
   #Check if columns of new data are unique
   new_data_uniqueness <- imap_lgl(new_data, ~ is_unique_column(.y, new_data))
-  view(new_data_uniqueness)
   is_unique_metadata <- metadata %>% pull(is_unique_column)
   comparison <- new_data_uniqueness == is_unique_metadata
   if(!all(comparison)){

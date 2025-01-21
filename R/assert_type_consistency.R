@@ -11,7 +11,7 @@
 #' @export
 
 assert_type_consistency <- function(data, metadata) {
-  for (i in 1:nrow(metadata)) {
+  for (i in seq_len(nrow(metadata))) {
     field <- metadata$raw_field_name[i]
     if (field %in% names(data)) {
       expected_type <- metadata$type_of_variable[i]

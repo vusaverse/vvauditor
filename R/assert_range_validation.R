@@ -11,7 +11,7 @@
 #' @export
 
 assert_range_validation <- function(data, metadata) {
-  for (i in 1:nrow(metadata)) {
+  for (i in seq_len(nrow(metadata))) {
     field <- metadata$raw_field_name[i]
     if (field %in% names(data) && !is.na(metadata$min[i]) && !is.na(metadata$max[i])) {
       lower <- metadata$min[i]
