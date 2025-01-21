@@ -21,6 +21,7 @@ Imports:
     lubridate,
     magrittr,
     purrr,
+    readr,
     stats,
     stringr,
     tibble

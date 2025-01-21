@@ -11,11 +11,12 @@
 
 assert_field_distinctness <- function(new_data, metadata){
   #Check if columns of new data are unique
-  new_data_uniqueness <- imap_lgl(new_data, ~ is_unique_column(.y, new_data))
-  is_unique_metadata <- metadata %>% pull(is_unique_column)
+  new_data_uniqueness <- purrr::imap_lgl(new_data, ~ is_unique_column(.y, new_data))
+  is_unique_metadata <- metadata %>% dplyr::pull(is_unique_column)
   comparison <- new_data_uniqueness == is_unique_metadata
   if(!all(comparison)){
     wrong_columns <- names(comparison)[!comparison]
+    #warning message weergeven op basis van unique/not unique
     warning(sprintf("The following fields are unique/not unique, going in against expectation: %s",
                     paste(wrong_columns, collapse = ", ")))
   }

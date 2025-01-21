@@ -20,13 +20,13 @@ run_all_assertions <- function(new_data, output_dir) {
     invokeRestart("muffleWarning")
   }
   # Load all metadata files
-  field_info <- read_csv2(file.path(output_dir, "field_info.csv"), show_col_types = FALSE)
-  numeric_details <- read_csv2(file.path(output_dir, "numeric_details.csv"), show_col_types = FALSE)
-  data_types <- read_csv2(file.path(output_dir, "data_types.csv"), show_col_types = FALSE)
+  field_info <- readr::read_csv2(file.path(output_dir, "field_info.csv"), show_col_types = FALSE)
+  numeric_details <- readr::read_csv2(file.path(output_dir, "numeric_details.csv"), show_col_types = FALSE)
+  data_types <- readr::read_csv2(file.path(output_dir, "data_types.csv"), show_col_types = FALSE)
   # Join metadata tables
   metadata <- field_info %>%
-    left_join(numeric_details, by = "preferred_field_name") %>%
-    left_join(data_types, by = "preferred_field_name")
+    dplyr::left_join(numeric_details, by = "preferred_field_name") %>%
+    dplyr::left_join(data_types, by = "preferred_field_name")
 
   # Run all assertions with warning handling
   withCallingHandlers({
