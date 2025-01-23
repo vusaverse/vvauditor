@@ -1,5 +1,5 @@
 test_that("checks whether an unexpected outlier is found in numeric data.", {
-  mtcars_test <- read_rds("tests/datasets/mtcars_test.rds")
+  mtcars_test <- return_mtcars_testfile()
 
   mtcars_test_changed <- mtcars_test %>%
     mutate(mpg = 35.4)

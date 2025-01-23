@@ -1,5 +1,5 @@
 test_that("Tests if fields are consistent", {
-  mtcars_test <- read_rds("tests/datasets/mtcars_test.rds")
+  mtcars_test <- return_mtcars_testfile()
 
   # Change a fieldname to test if the inconsistency drops an error.
   mtcars_test_changed <- mtcars_test %>%

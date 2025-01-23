@@ -1,5 +1,5 @@
 test_that("checks whether the uniqueness of columns in a new dataset matches the expected uniqueness", {
-  mtcars_test <- read_rds("tests/datasets/mtcars_test.rds")
+  mtcars_test <- return_mtcars_testfile()
 
   # column mpg is editted to be is_unique = True in field_info.csv
   metadata <- get_current_documentation() %>%

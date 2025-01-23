@@ -1,5 +1,5 @@
-test_that("checks types match.", {
-  mtcars_test <- read_rds("tests/datasets/mtcars_test.rds")
+test_that("checks if types match.", {
+  mtcars_test <- return_mtcars_testfile()
 
   mtcars_test_changed <- mtcars_test %>%
     mutate(mpg = as.character(mpg))

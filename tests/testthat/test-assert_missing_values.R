@@ -1,5 +1,5 @@
 test_that("checks whether the number of missing values diverts too much from the expectation", {
-  mtcars_test <- read_rds("tests/datasets/mtcars_test.rds")
+  mtcars_test <- return_mtcars_testfile()
 
   mtcars_test_changed <- mtcars_test %>%
     mutate(mpg = NA)
