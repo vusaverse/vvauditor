@@ -1,0 +1,13 @@
+preferred_field_name;raw_field_name;in_use;is_unique_column;is_primary_key;raw_data_path;broker;product;public_dataset
+mpg;mpg;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+cyl;cyl;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+disp;disp;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+hp;hp;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+drat;drat;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+wt;wt;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+qsec;qsec;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+vs;vs;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+am;am;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+gear;gear;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+carb;carb;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE
+spare_tire;spare_tire;TRUE;FALSE;FALSE;Testpath;Testbroker;Testproduct;FALSE

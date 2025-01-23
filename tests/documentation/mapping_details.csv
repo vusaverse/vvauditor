@@ -1,0 +1,13 @@
+preferred_field_name;has_mapping;mapping_name
+mpg;FALSE;NA
+cyl;FALSE;NA
+disp;FALSE;NA
+hp;FALSE;NA
+drat;FALSE;NA
+wt;FALSE;NA
+qsec;FALSE;NA
+vs;FALSE;NA
+am;FALSE;NA
+gear;FALSE;NA
+carb;FALSE;NA
+spare_tire;FALSE;NA

@@ -1,0 +1,13 @@
+preferred_field_name;type_of_variable;percentage_of_missing_values;count_of_valid_values;count_of_invalid_values;distinct_count
+mpg;numeric;0;32;0;25
+cyl;numeric;0;32;0;3
+disp;numeric;0;32;0;27
+hp;numeric;0;32;0;22
+drat;numeric;0;32;0;22
+wt;numeric;0;32;0;29
+qsec;numeric;0;32;0;30
+vs;numeric;0;32;0;2
+am;numeric;0;32;0;2
+gear;numeric;0;32;0;3
+carb;numeric;0;32;0;6
+spare_tire;logical;0;32;0;1
