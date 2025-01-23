@@ -1,156 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/articles/dataset-summary.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/assert_date_named.html</loc>
-  </url>
-  <url>
-    <loc>/reference/assert_logical_named.html</loc>
-  </url>
-  <url>
-    <loc>/reference/assert_no_duplicates_in_group.html</loc>
-  </url>
-  <url>
-    <loc>/reference/assertion_message.html</loc>
-  </url>
-  <url>
-    <loc>/reference/calculate_category_percentages.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_double_columns.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_duplicates.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_na_columns.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_no_duplicate_rows.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_no_duplicates_in_group.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_non_zero_rows.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_numeric_or_integer_type.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_posixct_type.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_rows.html</loc>
-  </url>
-  <url>
-    <loc>/reference/check_zero_columns.html</loc>
-  </url>
-  <url>
-    <loc>/reference/count_more_than_1.html</loc>
-  </url>
-  <url>
-    <loc>/reference/create_dataset_summary_table.html</loc>
-  </url>
-  <url>
-    <loc>/reference/drop_na_column_names.html</loc>
-  </url>
-  <url>
-    <loc>/reference/duplicates_in_column.html</loc>
-  </url>
-  <url>
-    <loc>/reference/find_common_columns.html</loc>
-  </url>
-  <url>
-    <loc>/reference/find_maximum_value.html</loc>
-  </url>
-  <url>
-    <loc>/reference/find_minimum_value.html</loc>
-  </url>
-  <url>
-    <loc>/reference/find_pattern_r.html</loc>
-  </url>
-  <url>
-    <loc>/reference/get_distribution_statistics.html</loc>
-  </url>
-  <url>
-    <loc>/reference/get_first_element_class.html</loc>
-  </url>
-  <url>
-    <loc>/reference/get_values.html</loc>
-  </url>
-  <url>
-    <loc>/reference/identify_join_pairs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/identify_outliers.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is_unique_column.html</loc>
-  </url>
-  <url>
-    <loc>/reference/md_complete_cases.html</loc>
-  </url>
-  <url>
-    <loc>/reference/regex_content_parameter.html</loc>
-  </url>
-  <url>
-    <loc>/reference/regex_time.html</loc>
-  </url>
-  <url>
-    <loc>/reference/regex_year_date.html</loc>
-  </url>
-  <url>
-    <loc>/reference/remove_duplicates_and_na.html</loc>
-  </url>
-  <url>
-    <loc>/reference/retrieve_function_calls.html</loc>
-  </url>
-  <url>
-    <loc>/reference/retrieve_functions_and_packages.html</loc>
-  </url>
-  <url>
-    <loc>/reference/retrieve_package_usage.html</loc>
-  </url>
-  <url>
-    <loc>/reference/retrieve_sourced_scripts.html</loc>
-  </url>
-  <url>
-    <loc>/reference/retrieve_string_assignments.html</loc>
-  </url>
-  <url>
-    <loc>/reference/return_assertions_message.html</loc>
-  </url>
-  <url>
-    <loc>/reference/str_detect_in_file.html</loc>
-  </url>
-  <url>
-    <loc>/reference/test_all_equal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/unique_id.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/dataset-summary.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/assert_date_named.html</loc></url>
+<url><loc>/reference/assert_logical_named.html</loc></url>
+<url><loc>/reference/assert_no_duplicates_in_group.html</loc></url>
+<url><loc>/reference/assertion_message.html</loc></url>
+<url><loc>/reference/calculate_category_percentages.html</loc></url>
+<url><loc>/reference/check_double_columns.html</loc></url>
+<url><loc>/reference/check_duplicates.html</loc></url>
+<url><loc>/reference/check_na_columns.html</loc></url>
+<url><loc>/reference/check_no_duplicate_rows.html</loc></url>
+<url><loc>/reference/check_no_duplicates_in_group.html</loc></url>
+<url><loc>/reference/check_non_zero_rows.html</loc></url>
+<url><loc>/reference/check_numeric_or_integer_type.html</loc></url>
+<url><loc>/reference/check_posixct_type.html</loc></url>
+<url><loc>/reference/check_rows.html</loc></url>
+<url><loc>/reference/check_zero_columns.html</loc></url>
+<url><loc>/reference/count_more_than_1.html</loc></url>
+<url><loc>/reference/create_dataset_summary_table.html</loc></url>
+<url><loc>/reference/drop_na_column_names.html</loc></url>
+<url><loc>/reference/duplicates_in_column.html</loc></url>
+<url><loc>/reference/find_common_columns.html</loc></url>
+<url><loc>/reference/find_maximum_value.html</loc></url>
+<url><loc>/reference/find_minimum_value.html</loc></url>
+<url><loc>/reference/find_pattern_r.html</loc></url>
+<url><loc>/reference/get_distribution_statistics.html</loc></url>
+<url><loc>/reference/get_first_element_class.html</loc></url>
+<url><loc>/reference/get_values.html</loc></url>
+<url><loc>/reference/identify_join_pairs.html</loc></url>
+<url><loc>/reference/identify_outliers.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/is_unique_column.html</loc></url>
+<url><loc>/reference/md_complete_cases.html</loc></url>
+<url><loc>/reference/regex_content_parameter.html</loc></url>
+<url><loc>/reference/regex_time.html</loc></url>
+<url><loc>/reference/regex_year_date.html</loc></url>
+<url><loc>/reference/remove_duplicates_and_na.html</loc></url>
+<url><loc>/reference/retrieve_function_calls.html</loc></url>
+<url><loc>/reference/retrieve_functions_and_packages.html</loc></url>
+<url><loc>/reference/retrieve_package_usage.html</loc></url>
+<url><loc>/reference/retrieve_sourced_scripts.html</loc></url>
+<url><loc>/reference/retrieve_string_assignments.html</loc></url>
+<url><loc>/reference/return_assertions_message.html</loc></url>
+<url><loc>/reference/str_detect_in_file.html</loc></url>
+<url><loc>/reference/test_all_equal.html</loc></url>
+<url><loc>/reference/unique_id.html</loc></url>
 </urlset>
+
