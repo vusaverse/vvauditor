@@ -7,5 +7,5 @@
 return_mtcars_testfile <- function() {
   testfile_path <- paste0(getwd(), "/datasets/mtcars_test.rds")
   mtcars_test <- readr::read_rds(testfile_path)
-  return(mtcars_test)
+  mtcars_test
 }
