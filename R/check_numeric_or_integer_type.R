@@ -25,11 +25,13 @@ check_numeric_or_integer_type <- function(column_name, dataframe, column_prefix 
 
   if (field_type == "integer") {
     checkmate::assert_integer(dataframe[[column_name]],
-                              .var.name = trimws(paste(column_prefix, column_name)),
-                              ...)
+      .var.name = trimws(paste(column_prefix, column_name)),
+      ...
+    )
   } else {
     checkmate::assert_numeric(dataframe[[column_name]],
-                              .var.name = trimws(paste(column_prefix, column_name)),
-                              ...)
+      .var.name = trimws(paste(column_prefix, column_name)),
+      ...
+    )
   }
 }

@@ -1,5 +1,5 @@
 test_that("returns the class of the first element for a numeric vector", {
-  input_vector <- c(1,  2,  3)
+  input_vector <- c(1, 2, 3)
   expect_equal(get_first_element_class(input_vector), "numeric")
 })
 
@@ -22,4 +22,3 @@ test_that("returns 'NULL' for a NULL input", {
   input_vector <- NULL
   expect_equal(get_first_element_class(input_vector), "NULL")
 })
-

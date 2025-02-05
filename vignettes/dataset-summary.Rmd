@@ -35,7 +35,6 @@ The primary function, `create_dataset_summary_table`, generates a summary statis
 ```{r summary, cols.print=5}
 summary_table <- create_dataset_summary_table(mtcars)
 summary_table
-
 ```
 
 The resulting table provides detailed information about each column, such as the data type, missing value percentage, range of values, and more.
@@ -70,7 +69,7 @@ These functions assist in determining the range of values for numeric columns:
 ```{r min_max}
 # Example usage
 
-find_minimum_value(mtcars$hp) # Minimum horsepower 
+find_minimum_value(mtcars$hp) # Minimum horsepower
 find_maximum_value(mtcars$disp) # Maximum displacement
 ```
 
@@ -82,7 +81,6 @@ With this function, you can easily check for uniqueness in a particular column:
 # Example usage
 
 is_unique_column("cyl", mtcars) # Are cylinder numbers unique?
-
 ```
 
 ## get_distribution_statistics
@@ -93,7 +91,6 @@ This function provides descriptive statistics for numeric columns:
 # Example usage
 
 get_distribution_statistics(mtcars$wt) # Distribution statistics for weight
-
 ```
 
 ## calculate_category_percentages
@@ -101,11 +98,9 @@ get_distribution_statistics(mtcars$wt) # Distribution statistics for weight
 Lastly, this function calculates the percentage breakdown of categories in a data vector:
 
 ```{r percentages}
-
 # Example usage
 
 calculate_category_percentages(mtcars$gear) # Category percentages for gears
-
 ```
 
 # Conclusion
