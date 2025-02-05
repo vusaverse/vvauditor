@@ -7,8 +7,14 @@
 <url><loc>/authors.html</loc></url>
 <url><loc>/index.html</loc></url>
 <url><loc>/reference/assert_date_named.html</loc></url>
+<url><loc>/reference/assert_field_consistency.html</loc></url>
+<url><loc>/reference/assert_field_distinctness.html</loc></url>
+<url><loc>/reference/assert_field_existence.html</loc></url>
 <url><loc>/reference/assert_logical_named.html</loc></url>
+<url><loc>/reference/assert_missing_values.html</loc></url>
 <url><loc>/reference/assert_no_duplicates_in_group.html</loc></url>
+<url><loc>/reference/assert_range_validation.html</loc></url>
+<url><loc>/reference/assert_type_consistency.html</loc></url>
 <url><loc>/reference/assertion_message.html</loc></url>
 <url><loc>/reference/calculate_category_percentages.html</loc></url>
 <url><loc>/reference/check_double_columns.html</loc></url>
@@ -47,6 +53,8 @@
 <url><loc>/reference/retrieve_sourced_scripts.html</loc></url>
 <url><loc>/reference/retrieve_string_assignments.html</loc></url>
 <url><loc>/reference/return_assertions_message.html</loc></url>
+<url><loc>/reference/return_mtcars_testfile.html</loc></url>
+<url><loc>/reference/run_all_assertions.html</loc></url>
 <url><loc>/reference/str_detect_in_file.html</loc></url>
 <url><loc>/reference/test_all_equal.html</loc></url>
 <url><loc>/reference/unique_id.html</loc></url>
