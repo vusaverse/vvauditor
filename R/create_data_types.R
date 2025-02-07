@@ -15,12 +15,12 @@
 
 # Function to create data_types.csv
 create_data_types <- function(data, mapping) {
-  tibble(
+  dplyr::tibble(
     preferred_field_name = mapping,
     type_of_variable = map_chr(data, ~ class(.x)[1]),
     percentage_of_missing_values = map_dbl(data, ~ mean(is.na(.)) * 100) %>% round(2),
-    count_of_valid_values = map_int(data, ~ sum(!is.na(.))),
-    count_of_invalid_values = map_int(data, ~ sum(is.na(.))),
+    count_of_valid_values = purrr::map_int(data, ~ sum(!is.na(.))),
+    count_of_invalid_values = purrr::map_int(data, ~ sum(is.na(.))),
     distinct_count = sapply(data, function(x) length(unique(x)))
   )
 }

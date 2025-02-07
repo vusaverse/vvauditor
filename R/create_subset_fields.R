@@ -25,15 +25,15 @@ create_subset_fields <- function(data, mapping) {
 
   if (length(subset_fields) > 0) {
     subset_info <- data %>%
-      select(all_of(subset_fields)) %>%
-      gather(key = "column_name", value = "value") %>%
-      distinct() %>%
-      arrange(column_name, value) %>%
-      filter(!is.na(value))
+      dplyr::select(dplyr::all_of(subset_fields)) %>%
+      tidyr::gather(key = "column_name", value = "value") %>%
+      dplyr::distinct() %>%
+      dplyr::arrange(column_name, value) %>%
+      dplyr::filter(!is.na(value))
 
     # Rename columns using the mapping
     subset_info <- subset_info %>%
-      mutate(column_name = mapping[column_name])
+      dplyr::mutate(column_name = mapping[column_name])
 
     return(subset_info)
   }

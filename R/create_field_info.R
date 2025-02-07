@@ -7,7 +7,7 @@
 #' @param broker The name of of the organisation or person that distributes the dataset
 #' @param product The name of the product where this dataset is used in
 #' @param public_dataset Boolean containing whether the dataset is publicly available
-#' @param is_primary_key Is_primary_key is variable that can be manually set to TRUE if the dataset contains a primary key.
+#' is_primary_key Is_primary_key is variable that can be manually set to TRUE if the dataset contains a primary key.
 #' @return Dataframe containing subset info
 #' @export
 
@@ -16,11 +16,11 @@ create_field_info <- function(data,
                               broker = NULL,
                               product = NULL,
                               public_dataset = NULL) {
-  field_info <- tibble(
+  field_info <- dplyr::tibble(
     preferred_field_name = names(data),
     raw_field_name = names(data),
     in_use = TRUE,
-    is_unique_column = imap_lgl(data, ~ {
+    is_unique_column = purrr::imap_lgl(data, ~ {
       vvauditor::is_unique_column(.y, data)
     }),
     is_primary_key = FALSE,

@@ -16,26 +16,26 @@
 create_numeric_details <- function(data, mapping) {
   # Apply get_dist to all columns
   all_stats <- data %>%
-    summarise(across(everything(), get_dist))
+    dplyr::summarise(dplyr::across(dplyr::everything(), get_dist))
 
   # Create a dataframe with separate columns for each statistic
-  numeric_details <- tibble(
+  numeric_details <- dplyr::tibble(
     raw_field_name = names(all_stats),
     distribution = unlist(all_stats)
   ) %>%
-    separate(distribution,
+      tidyr::separate(distribution,
       into = c("q1", "median", "q3", "mean", "sd"),
       sep = " \\| ",
       remove = FALSE
     ) %>%
-    mutate(across(q1:sd, ~ gsub(".*=\\s*", "", .))) %>%
-    mutate(across(q1:sd, as.numeric)) %>%
-    mutate(
+    dplyr::mutate(dplyr::across(q1:sd, ~ gsub(".*=\\s*", "", .))) %>%
+    dplyr::mutate(dplyr::across(q1:sd, as.numeric)) %>%
+    dplyr::mutate(
       min = sapply(data[raw_field_name], min, na.rm = TRUE),
       max = sapply(data[raw_field_name], max, na.rm = TRUE)
     ) %>%
-    mutate(preferred_field_name = mapping[raw_field_name]) %>%
-    select(preferred_field_name, min, max, q1, median, q3, mean, sd)
+    dplyr::mutate(preferred_field_name = mapping[raw_field_name]) %>%
+    dplyr::select(preferred_field_name, min, max, q1, median, q3, mean, sd)
 
   return(numeric_details)
 }

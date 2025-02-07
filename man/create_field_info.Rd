@@ -21,9 +21,8 @@ create_field_info(
 
 \item{product}{The name of the product where this dataset is used in}
 
-\item{public_dataset}{Boolean containing whether the dataset is publicly available}
-
-\item{is_primary_key}{Is_primary_key is variable that can be manually set to TRUE if the dataset contains a primary key.}
+\item{public_dataset}{Boolean containing whether the dataset is publicly available
+is_primary_key Is_primary_key is variable that can be manually set to TRUE if the dataset contains a primary key.}
 }
 \value{
 Dataframe containing subset info
