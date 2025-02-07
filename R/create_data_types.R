@@ -11,6 +11,7 @@
 #'     am = "am", gear = "gear", carb = "carb", spare_tire = "spare_tire"
 #'   )
 #' @return Tibble containing data_types
+#' @export
 
 # Function to create data_types.csv
 create_data_types <- function(data, mapping) {

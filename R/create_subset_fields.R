@@ -11,6 +11,7 @@
 #'     am = "am", gear = "gear", carb = "carb", spare_tire = "spare_tire"
 #'   )
 #' @return Dataframe containing subset info
+#' @export
 
 create_subset_fields <- function(data, mapping) {
   is_field_subset <- function(field_name, df) {

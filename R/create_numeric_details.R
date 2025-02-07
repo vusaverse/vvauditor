@@ -11,6 +11,7 @@
 #'     am = "am", gear = "gear", carb = "carb", spare_tire = "spare_tire"
 #'   )
 #' @return Dataframe containing numeric details.
+#' @export
 
 create_numeric_details <- function(data, mapping) {
   # Apply get_dist to all columns

@@ -10,6 +10,7 @@
 #'     drat = "drat", wt = "wt", qsec = "qsec", vs = "vs",
 #'     am = "am", gear = "gear", carb = "carb", spare_tire = "spare_tire"
 #' @return Dataframe containing categorical details
+#' @export
 
 create_categorical_details <- function(data, mapping) {
   categorical_cols <- data %>% select(where(~ is.factor(.) | is.character(.)))
