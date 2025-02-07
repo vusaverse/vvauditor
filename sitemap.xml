@@ -28,7 +28,12 @@
 <url><loc>/reference/check_rows.html</loc></url>
 <url><loc>/reference/check_zero_columns.html</loc></url>
 <url><loc>/reference/count_more_than_1.html</loc></url>
+<url><loc>/reference/create_categorical_details.html</loc></url>
+<url><loc>/reference/create_data_types.html</loc></url>
 <url><loc>/reference/create_dataset_summary_table.html</loc></url>
+<url><loc>/reference/create_field_info.html</loc></url>
+<url><loc>/reference/create_numeric_details.html</loc></url>
+<url><loc>/reference/create_subset_fields.html</loc></url>
 <url><loc>/reference/drop_na_column_names.html</loc></url>
 <url><loc>/reference/duplicates_in_column.html</loc></url>
 <url><loc>/reference/find_common_columns.html</loc></url>
