@@ -3,7 +3,7 @@ Title: Creates Assertion Tests
 Version: 0.6.0
 Authors@R: c(
     person("Tomer", "Iwan", email = "t.iwan@vu.nl", role = c("aut", "cre", "cph")),
-    person("Hajo", "Bons", email = "h.b.bons@vu.nl", role = c("aut", "cre", "cph")))
+    person("Hajo", "Bons", email = "h.b.bons@vu.nl", role = c("aut", "cph")))
 Description: Offers a comprehensive set of assertion tests to help users validate the integrity of their data. 
     These tests can be used to check for specific conditions or properties within a dataset and 
     help ensure that data is accurate and reliable. 
