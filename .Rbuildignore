@@ -5,3 +5,4 @@
 ^build_vvauditor.R
 ^\.github$
 ^codecov\.yml$
+^CRAN-SUBMISSION$
